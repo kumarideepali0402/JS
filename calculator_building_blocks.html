@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <textarea  id="result"></textarea>
+        <button id="two" onclick="appendToResult('2')">2</button>
+        <button id="one" onclick="appendToResult('1')">1</button>
+        <button id="add" onclick="appendToResult('+')">+</button>
+        <button id="calculate" onclick="calculate()">calculate</button>
+
+        <!-- <button id="change Text" onclick="writeToTextArea()">Change Text </button> -->
+        <script>
+            // function writeToTextArea(){
+            //     document.getElementById("result").innerHTML=" text";
+            // }
+            // writeToTextArea();
+
+            function appendToResult(myChar){
+                let currentContent=document.getElementById("result").innerHTML;
+                let finalContent=currentContent+myChar;
+                document.getElementById("result").innerHTML=finalContent;
+            }
+            function calculate(){
+                let expression=document.getElementById("result").innerHTML;
+                document.getElementById("result").innerHTML=eval(expression);
+            }
+        </script>
+    </body>
+</html>
