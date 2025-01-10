@@ -457,6 +457,22 @@ body.prepend(newBtn);
 para=document.querySelector("p");
 para.setAttribute("class","newClass");//will replace the class name with newClass
 para.classList.add("newClass") //will append newClass
+//  event
+// change in state of event
+// Types of events:mouse event,keyboard,form(submit),print event etc.
+
+btn1=document.querySelector(".btn1");
+btn1.onclick = () =>{
+    console.log("btn1 is  clicked");
+}
+// JS event handling>inline event handling
+
+buttonn=document.querySelector("#btn1");
+buttonn.addEventListener("click",()=>{
+    buttonn.style.color='blue'
+})
+
+
 
 
 
