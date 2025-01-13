@@ -14,6 +14,10 @@ const showWinner = (winner) => {
     
     disabledBoxes();
 };
+const showDraw=()=>{
+    msg.innerText="It's a draw";
+    msgContainer.classList.remove("hide");
+}
 
 const resetGame=()=>{
     turn0 = true;
@@ -60,6 +64,10 @@ const checkWinner=()=>{
 
 };
 
+const checkDraw=()=>{
+    return Array.from(boxes).every((box)=>box.innerHTML !=="");
+};
+
 boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
         if(turn0){
@@ -75,7 +83,9 @@ boxes.forEach((box)=>{
     
         }
         box.disabled=true;
-        checkWinner();
+        if(!checkWinner() && checkDraw()){
+            showDraw();
+        }
 
     });
     
