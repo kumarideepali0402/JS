@@ -21,7 +21,7 @@ body{
     padding: 10px;
     width: 100vw;
 }
-.choice{
+.choices{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,16 +31,16 @@ body{
 
     
 }
-.rock,.paper,.scissor{
+#rock,#paper,#scissor{
     transition: transform 0.2s ease;
 }
-.rock:hover,.paper:hover,.scissor:hover{
+#rock:hover,#paper:hover,#scissor:hover{
     transform: scale(1.1);
     border: 5px solid black;
 
     
 }
-.choice img{
+.choices img{
     height: 150px;
     width: 150px;
     border-radius: 50%;

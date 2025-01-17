@@ -472,8 +472,19 @@ buttonn.addEventListener("click",()=>{
     buttonn.style.color='blue'
 })
 
+// Classes and objects
+const Student={
+    fullName:"deepali",
+    roll_no:45,
+    marks:45,
+    printMarks:()=>{
+        console.log("Marks:",this.marks);
+    }
 
+}
 
+// every object has a special property called prototype which is itself an object which contains properties and methods of the class
+// We can set prototype using __proto__
 
 
 
