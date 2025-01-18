@@ -105,3 +105,59 @@ console.log(h);
 p=marks.filter(element=>element%2===0)
 
 
+
+const obj={
+    greet:()=>{
+        console.log("hello")
+    }
+
+}
+obj['greet'];
+
+
+
+
+
+const f1=function(){
+    console.log("hi");
+    
+}
+const f2=function(){
+    console.log("Deepali");
+    
+}
+const list=[f1,f2];
+list[0]();
+console.log(list);
+
+list2=['a','b']
+console.log(list2);
+
+const greet=function(){
+    console.log("hEllo");
+}
+
+
+function greetings(){
+    return greet;
+
+}
+p=greetings();
+p();
+
+// or
+
+greetings()();
+console.log('******')
+
+function Name() {
+    console.log("Deepali");
+    return "kumari";
+}
+
+function greetDeepali(namefun){
+    console.log(namefun());
+    return greet;
+}
+
+greetDeepali(Name)();

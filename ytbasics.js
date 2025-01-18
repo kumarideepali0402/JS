@@ -446,31 +446,31 @@ newHeading.remove(); will delete the newHeading completely
 
 // Practice
 // Qs 1
-let newBtn=document.createElement("button");
-newBtn.innerHTML="click me!";
-newBtn.style.backgroundColor="red";
-newBtn.style.fontSize="26px";
-body=document.querySelector("body");
-body.prepend(newBtn);
+// let newBtn=document.createElement("button");
+// newBtn.innerHTML="click me!";
+// newBtn.style.backgroundColor="red";
+// newBtn.style.fontSize="26px";
+// body=document.querySelector("body");
+// body.prepend(newBtn);
 
 // Qs2
-para=document.querySelector("p");
-para.setAttribute("class","newClass");//will replace the class name with newClass
-para.classList.add("newClass") //will append newClass
+// para=document.querySelector("p");
+// para.setAttribute("class","newClass");//will replace the class name with newClass
+// para.classList.add("newClass") //will append newClass
 //  event
 // change in state of event
 // Types of events:mouse event,keyboard,form(submit),print event etc.
 
-btn1=document.querySelector(".btn1");
-btn1.onclick = () =>{
-    console.log("btn1 is  clicked");
-}
+// btn1=document.querySelector(".btn1");
+// btn1.onclick = () =>{
+//     console.log("btn1 is  clicked");
+// }
 // JS event handling>inline event handling
 
-buttonn=document.querySelector("#btn1");
-buttonn.addEventListener("click",()=>{
-    buttonn.style.color='blue'
-})
+// buttonn=document.querySelector("#btn1");
+// buttonn.addEventListener("click",()=>{
+//     buttonn.style.color='blue'
+// })
 
 // Classes and objects
 const Student={
@@ -485,6 +485,172 @@ const Student={
 
 // every object has a special property called prototype which is itself an object which contains properties and methods of the class
 // We can set prototype using __proto__
+const Employee={
+    Fname:"Despo",
+    salary:20000,
+
+}
+const Employee2={
+    Fname:"fiasco",
+    company:"tesco"
+
+}
+Employee2.__proto__=Employee;
+console.log(Employee2.salary);
+
+
+// Class
+class Hostel{
+    opening(){
+        console.log("opens at 5am");
+
+    }
+    closing(){
+        console.log("closes at 9pm");
+    }
+    BookRoom(roomno){
+        this.bookedRoom=roomno;
+    }
+}
+
+yello= new Hostel();
+console.log(typeof yello);//object
+yello.opening();//opens at 5am
+yello.BookRoom(425);
+console.log(yello.bookedRoom);//425
+
+// constructor() method is automatically invoked by new keyboard and it initializes objects
+
+class NewHostel{
+    constructor(bRoom,occupancy){
+        console.log("creating object..");
+        this.bookedRoom=bRoom;
+        this.occupancy=occupancy;
+
+    }
+    opening(){
+        console.log("opens at 5am");
+
+    }
+    closing(){
+        console.log("closes at 9pm");
+    }
+    
+}
+
+stanza=new NewHostel();//if you won't pass the arguments to it then those will be initialized with undefined
+console.log(stanza.bookedRoom);//undefined
+
+
+// inheritance in JS:Passing down properties and methods from parent class to child class
+// super keyword:it is used to call constructor of the parent class to access parentsproperties and method (only when we make use of "this" keyword in child class)
+class Parent{
+    constructor(legs,hands,eyes){
+        this.legs=legs;
+        this.hands=hands;
+        this.eyes=eyes;
+    }
+
+    job(){
+        console.log("Shape child");
+    }
+};
+
+class Child extends Parent{
+   
+    constructor(hobby){
+        super(3,4);// to invoke parents class constructor,if you want to pass argument to parent constructor from child then tht u can pass inside super()
+
+        this.hobby=hobby;
+    }
+    job(){
+        console.log("Inside child class")
+        super.job();
+    }
+}
+
+p=new Parent(2,2,2);
+console.log(p.legs);
+
+c=new Child("sing");
+console.log(c.hobby);
+console.log(c.legs);
+c.job();
+
+
+// Practice
+class User{
+    constructor(name,email){
+        this.name=name;
+        this.email=email;
+    }
+    view(){
+        console.log("Viewing the data")
+    }
+}
+u=new User("deepali","deepali@gmail.com");
+console.log(u.name); //deepali
+u.view();//Viewing the data
+ 
+class Admin extends User{
+    constructor(possession,name,email){
+        super(name,email);
+        this.possession=possession;
+
+    }
+    editData(){
+        console.log("editing is allowed");
+    }
+}
+adm=new Admin("admin","rijhi","rijhi123@gmail.com")
+console.log(adm.email);
+
+
+
+// error handling
+let aa=7;
+let bb=8;
+try{
+    console.log(aa+cc);
+}
+catch(err){
+    console.log(err);//this will print the error and then continue the execution of further lines without haltk
+}
+console.log(7+9);
+
+
+
+// Sync in JS
+// Synchronous Programming:Means codes run in a particular sequence of instructions given  in program.Each instruction waits for previous instruction to complete its education
+// Asynchronous Programming:due to synchronous programming , some imp instructions gets blocked due to some previous instructions,which causes a delay in ythe UI.Asynchronous code execution allows to execute next instructions immediately and does not block the flow
+// setTimeout()
+
+function hello(){
+    console.log("hello");
+}
+setTimeout(hello,2000); //2s=2000ms
+
+
+// Asynchronous Programming example
+console.log("a");
+console.log("b");
+setTimeout(hello,4000);
+console.log("c");
+console.log("d");
+
+// Callback:
+function sum(a,b){
+    console.log(a+b);
+}
+ 
+function calculator(a,b,callback){
+    return callback(a,b);
+}
+ 
+calculator(1,2,sum);//3
+
+
+
 
 
 
