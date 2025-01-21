@@ -627,6 +627,8 @@ console.log(7+9);
 
 function hello(){
     console.log("hello");
+
+    
 }
 setTimeout(hello,2000); //2s=2000ms
 

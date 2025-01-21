@@ -45,5 +45,54 @@ h1{
 
 }
 
+.task-input{
+    text-align: center;
+    margin: 20px;
+
+}
+
+.task-list-item{
+    position: relative;
+    border: 1px solid gray;
+    list-style: none;
+    width: 60%;
+    text-align: left;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px;
+
+}
+
+.done-button{
+    position: absolute;
+    right: 50px;
+    background-color: green;
+    border-radius: 5px;
+    padding: 2px;
+    color: white;
+}
+.delete-button{
+    position: absolute;
+    right: 5px;
+    background-color: red;
+    border-radius: 5px;
+    padding: 2px;
+    color: white;
+}
+.done{
+    text-decoration: line-through;
+    color: green;
+}
+/* .task-list{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+   
+    width: 90%;
+    border: 1px solid black;
+
+} */
+ 
+
 
 
