@@ -652,6 +652,33 @@ function calculator(a,b,callback){
 calculator(1,2,sum);//3
 
 
+function getData(id){
+    setTimeout(()=>{
+        console.log("id:",id);
+    },2000)
+}
+getData(9);
+
+
+
+function getData(dataId,getNextData){
+    setTimeout(()=>{
+        console.log("data",dataId);
+        if(getNextData) getNextData();
+
+    },2000);
+
+}
+// Callback Hell
+getData(1,()=>{
+    getData(2,()=>{
+        getData(3,()=>{
+            getData(4);
+        });
+    });
+});
+
+
 
 
 

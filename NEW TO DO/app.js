@@ -7,7 +7,6 @@ addTaskButton.addEventListener("click",addTask);
 
 
 function addTask(){
-    //addONeRowToTable()
     taskText=inputTaskText.value.trim();
     console.log(taskText);
     if(taskText===""){

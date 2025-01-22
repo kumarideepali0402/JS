@@ -55,11 +55,12 @@ h1{
     position: relative;
     border: 1px solid gray;
     list-style: none;
-    width: 60%;
+    /* width: 60%; */
     text-align: left;
     padding: 8px;
     border-radius: 8px;
     margin: 8px;
+    /* margin-left: 46px; */
 
 }
 
@@ -83,15 +84,15 @@ h1{
     text-decoration: line-through;
     color: green;
 }
-/* .task-list{
-    display: flex;
+.task-list{
+    /* display: flex;
     justify-content: center;
-    /* flex-direction: column; */
+    flex-direction: column;
    
-    width: 90%;
-    border: 1px solid black;
+    width: 90%; */
+    /* border: 1px solid black; */
 
-} */
+}
  
 
 
