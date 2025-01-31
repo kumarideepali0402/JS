@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            color:red;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            background: orange;color:dodgerblue;
+
+        }
+        #outermost{
+            height: 600px;
+            width: 600px;
+            background-color: red;
+        }
+        #outer{
+            height: 400px;
+            width: 400px;
+            background-color:blue;
+        }
+        #out{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="content">I'm a paragraph</p>
+    <!-- inline event handling -->
+    <button onclick="console.log('hi');alert('thanks')">Click me!</button>
+    <button ondblclick="console.log('hi');alert('thanks')">Click me twice!</button>
+    <div onmouseover="console.log('you are inside div')">hover over me</div>
+    <button class="btn1">using js</button>
+    <div id="outermost">
+        <div id="outer">
+            <div id="out">
+                <p>out</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="practice.js"> </script>
+</body>
+</html>
