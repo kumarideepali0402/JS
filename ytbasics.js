@@ -678,9 +678,87 @@ getData(1,()=>{
     });
 });
 
+// Promises: this is for eventual completion of task.It's an object in JS. It's a solution to call back hell.
+// resolve and reject are callbacks provided by js.
+
+
+// let promise= new Promise((resolve,reject)=>{
+//     console.log("im promise");
+//     reject("Error occurred");
+
+// });
+
+
+// function getData(dataId,getNextData){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+
+//             console.log("data",dataId);
+//             // resolve("successs");
+//             reject("error");
+//             if(getNextData) getNextData();
+    
+//         },2000);
+
+//     });
+    
+
+// }
+
+// .then && .catch
+// const getPromise=()=>{
+//     return new Promise((resolve,reject)=>{
+//         console.log("im promise");
+//         reject("Error occurred");
+//         // resolve();
+    
+//     });
+
+// }
+
+// let pro=getPromise();
+// pro.then((msg)=>{
+//     console.log("promise achieved",msg);
+// }).catch((msg)=>{
+//     console.log("errooorrrrrr",msg); //errooorrrrrr Error occurred
+// });
+
+
+// async-await:
+// async function always returns a promise 
+console.log("******");
+async function hi(){
+    console.log("hi");
+}
+hi();
+
+// async pauses the execuition of its surrounding async function until the promise is settled
+
+function api(){
+    return new Promise(()=>{
+        setTimeout(()=>{
+            console.log("weather is normal");
+            resolve(200);
+        },2000);
+
+    });
+    
+}
+async function getWeatherData(){
+    await api();
+
+}
+
+// for async aewit function to work we need to call it ..to refrain from that we have IIFE(Immediately Invoked Function Expression)
+// IIFE is a function which is called as soon as it is defined
+// Syntax:
+// (function() {
+//     console.log('Hello!');    
+// })(); 
 
 
 
+// FEtch API
 
 
 

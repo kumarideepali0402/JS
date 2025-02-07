@@ -26,9 +26,61 @@
     
 // }
 // const rose=new Plant(30,"red");
-function hello(){
-    console.log("hi");
+// function hello(){
+//     console.log("hi");
+// }
+
+
+// setTimeout(hello,4000);
+
+let num=1;
+console.log("hi".toUpperCase());
+// try {
+//     num.toUpperCase();
+// } catch (error) {
+//     console.log(error.name);
+//     console.log("*********");
+    
+//         console.log(error.message);
+//         document.querySelector(".content").innerHTML=error.name;
+    
+// }
+const str=`{"name":"yuv"}`;
+try{
+    const obj=JSON.parse(str);
+    document.querySelector(".content").innerHTML="parsed well...";
+}
+catch (error) {
+    console.log(error.name);
+    console.log("*********");
+    
+        console.log(error.message);
+        // document.querySelector(".content").innerHTML=error.name;
+    
 }
 
+class BankBalance extends Error{
+    constructor(message){
+        super(message);
+        this.name="Insufficient Balance";
+    }
+}
 
-setTimeout(hello,4000);
+const currBalace=10000;
+const reqBal=1000000;
+try {
+    if(reqBal>currBalace){
+        throw new BankBalance("itne ameer nahi ho tum..")
+    }
+    
+    
+} catch (error) {
+    console.log(error.name);
+    console.log(error.message);
+    
+}
+const reqButton=document.querySelector(".reqbal");
+reqButton.addEventListener("click",()=>{
+    
+
+})
